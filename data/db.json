@@ -1,0 +1,22 @@
+{ 
+    "blogs": [ 
+    {
+      "title": "The Art of Coding",
+      "body": "Coding is a blend of creativity and logic, where the possibilities are endless. It's about problem-solving and continuous learning.",
+      "author": "John Doe",
+      "id": 1
+    },
+    {
+     "title": "The Future of AI",
+      "body": "Artificial intelligence is transforming industries, with applications in healthcare, finance, and even creative fields. The future is now.",
+      "author": "Jane Smith",
+      "id": 2
+    },
+    {
+      "title": "Exploring the Cosmos",
+      "body": "Space exploration is reaching new heights. From Mars rovers to private space travel, humanity is stepping into an exciting new era.",
+      "author": "John Doe",
+      "id": 3
+    }
+  ]
+}

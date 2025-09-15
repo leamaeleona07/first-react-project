@@ -12,7 +12,7 @@ const Navbar = ({className}) => {
 
   return (
     <nav className={`border border-gray-200 h-16 ${className}`}>
-      <ul className="w-full flex h-full items-center gap-5 justify-center font-bold">
+      <ul className="w-screen flex h-full items-center gap-5 justify-center font-bold">
         {links.map((link, index) => (
           <ul className="text-red-500 hover:text-teal-300" key={index}>
             <a href={link.href}>{link.label}</a>
@@ -24,3 +24,4 @@ const Navbar = ({className}) => {
 };
 
 export default Navbar;
+

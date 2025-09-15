@@ -1,19 +1,22 @@
-const BlogList = ({props}) => {
+const BlogList = ({ blogs, title, }) => {
+  return (
+    <div className="flex flex-col gap-2 blog-list max-w-[40rem] mx-auto rounded-xl ">
+      <h2 className="text-pink-500">{title}</h2>
+     {/* looping thru each blog, returning a block for each */}
+      {blogs.map((blog) => (
+        <div
+          className="block font-semibold border gap-5 rounded-xl !p-6 w-screen"
+          // provide id to track each blog
+          key={blog.id} >
+          <h2>{blog.title}</h2>
+          <p>written by {blog.author}</p>
 
-    const blogs = props.blogs;
-
-    console.log(props,blogs);
-    return ( 
-        <div className="blog-list">
-            {blogs.map((blog ) => (
-          <div className="flex flex-row text-center font-semibold leading-10 border gap-2" key={blog.id}>
-            <h2>{blog.title}</h2>
-            <p>written by {blog.author}</p>
-          </div>
-
-        ))}
+          {/* calls the function handleDelete when clicked */}
+  
         </div>
-     );
+      ))}
+    </div>
+  );
 }
- 
+
 export default BlogList;
