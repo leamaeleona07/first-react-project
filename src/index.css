@@ -7,7 +7,7 @@
 }
 
 
-@theme {
+:root {
   --color-forest-green-50: #effef2;
 --color-forest-green-100: #dbfde3;
 --color-forest-green-200: #b9f9c7;
@@ -31,4 +31,31 @@
     }
   }
 
+}
+
+.navbar {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  font-size: 32px;
+  border-bottom: 1px solid gray;
+}
+
+.navbar .links{
+  margin: auto;
+  gap: 5px;
+}
+
+.navbar h1{
+  margin-left: 300px;
+}
+
+.navbar a {
+  margin-left: 14px;
+}
+
+.navbar a:hover {
+  color: #1bcc46;
 }
