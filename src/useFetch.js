@@ -1,3 +1,4 @@
+// Custom hook
 import { useState, useEffect } from "react";
 
 const useFetch = (url) => {
@@ -6,22 +7,18 @@ const useFetch = (url) => {
   const [error, setError] = useState(true);
 
   useEffect(() => {
-    const AbortCont = new AbortController();
 
     const fetchBlogs = async () => {
       try {
-        const res = await fetch(url, {signal: AbortCont.signal});
+        const res = await fetch(url);
         
         const data = await res.json();
         // updates the value of blog
         setData(data);
       } catch (error) {
-        if (error.name === 'AbortError') {
-          console.log('fetch aborted');
-        } else {
           setError("could not fetch the data for that resource");
           console.error(error);
-        }
+        
       } finally {
           setIsPending(false);
         
@@ -30,8 +27,6 @@ const useFetch = (url) => {
 
     //   sets the timeout for fetchBlogs in 1sec
     setTimeout(() => (fetchBlogs()), 3000);
-
-    return () => AbortCont.abort();
     
   }, [url]);
   return { error, data, isPending }; 

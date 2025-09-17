@@ -2,54 +2,34 @@ import { useState, useEffect } from "react";
 import BlogList from "./components/BlogList";
 import "./index.css";
 import useFetch from "./useFetch";
-
+import { HashLoader } from "react-spinners";
+import Loader from "./components/Loader";
+// import { HashLoader } from "react-spinners";
 const Home = () => {
-  const { error, isPending, data: blogs } = useFetch('http://localhost:3000/blogs')
+  const {
+    error,
+    isPending,
+    data: blogs,
+  } = useFetch("http://localhost:3000/blogs");
+
+  if (isPending) {
+    return (<Loader />);
+  }
 
   return (
-    
-    <div className="home flex flex-col w-screen justify-center m-auto ">
+    <div className="flex flex-col justify-center w-72 ">
       <h1 className=" text-pink-400 text-3xl ">All Blogs!</h1>
-      { error && <div>{ error }</div> }
-      { isPending && <div>Loading...</div> }
-      { blogs && <BlogList blogs={blogs} /> }
+      {error && <div>{error}</div>}
+      {blogs && <BlogList blogs={blogs} />}
+
     </div>
   );
-}
- 
+};
+
 export default Home;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // const App = () => {
-//   const { blogs, isPending } = useFetch('http://localhost:8000/blogs'); 
+//   const { blogs, isPending } = useFetch('http://localhost:8000/blogs');
 //   // const { blogs: newData, isPending: isNewDFataPendig } = useFetch('http://localhost:8000/blogs');
 //   const [name, setName] = useState("ivan");
 //   const [age] = useState(21);
@@ -63,7 +43,7 @@ export default Home;
 //   //       const data = await res.json();
 //   //       // updates the value of blog
 //   //       setBlogs(data);
-        
+
 //   //     } catch (error) {
 //   //       console.error(error);
 //   //     }
@@ -97,8 +77,7 @@ export default Home;
 
 //       <div className="Home h-screen w-screen flex flex-col justify-center items-center">
 //           {isPending && <div>Loading...</div>}
-          
-          
+
 //         {blogs && <BlogList blogs={blogs} title="All Blogs" />}
 
 //         <h1 className="text-blue-500 text-center">

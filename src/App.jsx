@@ -1,8 +1,9 @@
 import Navbar from "./components/Navbar";
 import Home from "./Home";
 import Create from "./components/Create";
-
+import BlogDetails from "./components/BlogDetails";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+
 function App() {
   return (
     <Router>
@@ -14,6 +15,8 @@ function App() {
                 When matched, it renders the component assigned to that route. (create) */}
           <Route exact path="/" element={<Home />} />
           <Route path="/create" element={<Create />} />
+          <Route path="/blogs/:id" element={<BlogDetails />} /> 
+          <Route path="*" element={<div>NOT FOUND</div>} /> 
         </Routes>
       </div>
     </Router>
