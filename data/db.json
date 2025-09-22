@@ -2,7 +2,7 @@
   "blogs": [
     {
       "title": "The Art of Coding",
-      "body": "Coding is a blend of creativity and logic, where the possibilities are endless. It's about problem-solving and continuous learning.",
+      "body": "JavaScript is often called the language of the web. It allows you to make web pages dynamic, handle user interactions, and fetch data from APIs.\nA good way to start learning is by focusing on variables, functions, and loops.\nOnce you're comfortable, you can explore modern tools like ES6 features, modules, and frameworks such as React or Vue.",
       "author": "Mario",
       "id": "1"
     },
