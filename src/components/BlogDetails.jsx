@@ -1,11 +1,23 @@
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import useFetch from "../useFetch";
 import Loader from "./Loader";
 
 const BlogDetails = () => {
   const { id } = useParams();
+  const navigate = useNavigate();
   const { data: blogs, error, isPending } = useFetch("http://localhost:3000/blogs/" + id);
-  
+
+  const handleDelete = async (e) => {
+    try {
+      const res = await fetch('http://localhost:3000/blogs/' + blogs.id, {
+        method: 'DELETE',
+      });
+        navigate('/')
+
+    } catch (error) {
+      console.log(error);
+    }
+  }
   if (isPending) {
     return (
       <Loader />
@@ -22,6 +34,7 @@ const BlogDetails = () => {
             </h2>
                   <p className="text-gray-500">written by {blogs.author}</p>
                   <div className="mt-10 text-lg leading-relaxed indent-8"> {blogs.body}</div>
+                  <button onClick={handleDelete}>Delete</button>
         </article>
       )}
     </div>

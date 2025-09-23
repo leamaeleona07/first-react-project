@@ -1,12 +1,6 @@
 {
   "blogs": [
     {
-      "title": "The Art of Coding",
-      "body": "JavaScript is often called the language of the web. It allows you to make web pages dynamic, handle user interactions, and fetch data from APIs.\nA good way to start learning is by focusing on variables, functions, and loops.\nOnce you're comfortable, you can explore modern tools like ES6 features, modules, and frameworks such as React or Vue.",
-      "author": "Mario",
-      "id": "1"
-    },
-    {
       "title": "The Future of AI",
       "body": "Artificial intelligence is transforming industries, with applications in healthcare, finance, and even creative fields. The future is now.",
       "author": "Jane Smith",
@@ -17,12 +11,6 @@
       "body": "Space exploration is reaching new heights. From Mars rovers to private space travel, humanity is stepping into an exciting new era.",
       "author": "John Doe",
       "id": "3"
-    },
-    {
-      "id": "9cde",
-      "title": "fgt",
-      "body": " fgfgxbhfgx",
-      "author": "mario"
     },
     {
       "id": "15e4",
@@ -52,6 +40,18 @@
       "id": "a68e",
       "title": "1",
       "body": "123",
+      "author": "mario"
+    },
+    {
+      "id": "1478",
+      "title": "Why Learn JavaScript?",
+      "body": "JavaScript is one of the most popular programming languages in the world. It powers almost every website, helps create interactive features, and is also used in backend development with Node.js. Learning JavaScript gives you the skills to build both front-end and back-end applications",
+      "author": "Jane smith"
+    },
+    {
+      "id": "1dd9",
+      "title": "test",
+      "body": "test",
       "author": "mario"
     }
   ]
